@@ -1,11 +1,11 @@
 Name:           KDE-CDEmu
-Version:        0.8.2
+Version:        v0.8.2
 Release:        0
 Summary:        Frontend to CDEmu
 License:        GPL-2.0-or-later
 Group:          System/GUI/KDE
 URL:            https://www.linux-apps.com
-Source0:        https://github.com/RodoMa92/kde-cdemu-manager/archive/%{version}.tar.gz
+Source0:        https://github.com/RodoMa92/kde-cdemu-manager/archive/refs/tags/%{version}.tar.gz
 BuildRequires:  breeze-icon-theme
 BuildRequires:  cmake
 BuildRequires:  extra-cmake-modules
