@@ -49,3 +49,4 @@ make install DESTDIR=$RPM_BUILD_ROOT
 %{_kf5_datadir}/locale
 
 %changelog
+%autochangelog
