@@ -5,7 +5,7 @@ Summary:        Frontend to CDEmu
 License:        GPL-2.0-or-later
 Group:          System/GUI/KDE
 URL:            https://www.linux-apps.com
-Source0:        https://github.com/RodoMa92/kde-cdemu-manager/archive/refs/tags/v0.8.2.tar.gz
+Source0:        https://github.com/RodoMa92/kde-cdemu-manager/archive/refs/tags/v{%version}.tar.gz
 BuildRequires:  breeze-icon-theme
 BuildRequires:  cmake
 BuildRequires:  extra-cmake-modules
@@ -44,9 +44,8 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 %files
 %{_kf5_bindir}/kde_cdemu
-%{_kf5_datadir}/applications/kde_cdemu.desktop
+%{_kf5_datadir}/applications/org.kde.kde_cdemu.desktop
 %{_kf5_datadir}/kservices5/ServiceMenus/kde_cdemu_mount.desktop
-%{_kf5_datadir}/kxmlgui5/kde_cdemu/kde_cdemuui.rc
 %{_kf5_datadir}/locale
 
 %changelog
