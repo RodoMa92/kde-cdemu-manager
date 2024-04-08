@@ -39,6 +39,7 @@ cd redhat-linux-build
 make %{?_smp_mflags}
 
 %install
+cd redhat-linux-build
 make install DESTDIR=$RPM_BUILD_ROOT
 
 %files
