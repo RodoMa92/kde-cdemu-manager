@@ -5,7 +5,7 @@ Summary:    Frontend to CDEmu
 License:        GPL-2.0-or-later
 Group:          System/GUI/KDE
 URL:              https://github.com/marcelh83/kde-cdemu-manager
-Source0:       https://github.com/RodoMa92/kde-cdemu-manager/archive/refs/tags/v{%version}.tar.gz
+Source0:       https://github.com/RodoMa92/kde-cdemu-manager/archive/refs/tags/v%{version}.tar.gz
 BuildRequires:  breeze-icon-theme
 BuildRequires:  cmake
 BuildRequires:  extra-cmake-modules
