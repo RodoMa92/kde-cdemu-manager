@@ -35,6 +35,7 @@ Dolphin/Konqueror.
 
 %build
 %{cmake} -DBUILD_SHARED_LIBS:BOOL=OFF
+cd redhat-linux-build
 make %{?_smp_mflags}
 
 %install
