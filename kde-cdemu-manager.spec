@@ -1,11 +1,11 @@
 Name:           kde-cdemu-manager
 Version:        0.8.2
 Release:        0
-Summary:    Frontend to CDEmu
+Summary:        Frontend to CDEmu
 License:        GPL-2.0-or-later
 Group:          System/GUI/KDE
-URL:              https://github.com/marcelh83/kde-cdemu-manager
-Source0:       https://github.com/RodoMa92/kde-cdemu-manager/archive/refs/tags/v%{version}.tar.gz
+URL:            https://github.com/marcelh83/kde-cdemu-manager
+Source0:        https://github.com/RodoMa92/kde-cdemu-manager/archive/refs/tags/v%{version}.tar.gz
 BuildRequires:  breeze-icon-theme
 BuildRequires:  cmake
 BuildRequires:  extra-cmake-modules
@@ -16,8 +16,8 @@ BuildRequires:  kf5-knotifications-devel
 BuildRequires:  kf5-kxmlgui-devel
 BuildRequires:  cmake(Qt5Core)
 BuildRequires:  cmake(Qt5Widgets)
-Requires:           cdemu-daemon
-Recommends:  %{name}-lang
+Requires:       cdemu-daemon
+Recommends:     %{name}-lang
 
 %description
 KDE CDEmu Manager is a simple frontend for CDEmu.
