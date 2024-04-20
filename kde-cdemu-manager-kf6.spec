@@ -47,7 +47,7 @@ make install DESTDIR=$RPM_BUILD_ROOT
 %files
 %{_kf6_bindir}/kde_cdemu
 %{_kf6_datadir}/applications/org.kde.kde_cdemu.desktop
-%{_kf6_datadir}/kservices5/ServiceMenus/kde_cdemu_mount.desktop
+%{_kf6_datadir}/kio/servicemenus/kde_cdemu_mount.desktop
 %{_kf6_datadir}/locale
 
 %changelog
