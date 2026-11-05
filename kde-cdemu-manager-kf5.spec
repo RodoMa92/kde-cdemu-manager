@@ -46,7 +46,12 @@ cd redhat-linux-build
 
 %install
 cd redhat-linux-build
-make install DESTDIR=$RPM_BUILD_ROOT
+# From Fedora 44 cmake by default will output a ninja buildfile rather than a makefile
+%if %{?fedora} >= 44
+    ninja install DESTDIR=$RPM_BUILD_ROOT
+%else
+    make install DESTDIR=$RPM_BUILD_ROOT
+%endif
 
 %files
 %{_kf5_bindir}/kde_cdemu

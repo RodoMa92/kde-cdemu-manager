@@ -47,7 +47,11 @@ cd redhat-linux-build
 
 %install
 cd redhat-linux-build
-make install DESTDIR=$RPM_BUILD_ROOT
+%if %{?fedora} >= 44
+    ninja install DESTDIR=$RPM_BUILD_ROOT%{?_smp_mflags}
+%else
+    make install DESTDIR=$RPM_BUILD_ROOT
+%endif
 
 %files
 %{_kf6_bindir}/kde_cdemu
