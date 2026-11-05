@@ -38,7 +38,7 @@ Dolphin/Konqueror.
 cmake --build redhat-linux-build
 
 %install
-cmake --install redhat-linux-build --prefix $RPM_BUILD_ROOT
+cmake --install redhat-linux-build --prefix $RPM_BUILD_ROOT/usr
 
 %files
 %{_kf5_bindir}/kde_cdemu
