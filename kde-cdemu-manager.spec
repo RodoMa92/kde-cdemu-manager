@@ -1,6 +1,6 @@
 Name:           kde-cdemu-manager
 Version:        0.9
-Release:        0
+Release:        1
 Summary:        Frontend to CDEmu
 License:        GPL-2.0-or-later
 Group:          System/GUI/KDE

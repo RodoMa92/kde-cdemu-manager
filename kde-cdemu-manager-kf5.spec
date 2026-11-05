@@ -5,7 +5,7 @@ Summary:        Frontend to CDEmu
 License:        GPL-2.0-or-later
 Group:          System/GUI/KDE
 URL:            https://github.com/marcelh83/kde-cdemu-manager
-Source0:       https://github.com/RodoMa92/kde-cdemu-manager/releases/download/v%{version}/kde-cdemu-manager-%{version}.zip
+Source0:        https://github.com/RodoMa92/kde-cdemu-manager/releases/download/v%{version}/kde-cdemu-manager-%{version}.zip
 BuildRequires:  breeze-icon-theme
 BuildRequires:  cmake
 BuildRequires:  extra-cmake-modules
@@ -34,11 +34,11 @@ Dolphin/Konqueror.
 %autosetup
 
 %build
-%{cmake} -DBUILD_SHARED_LIBS:BOOL=OFF
-cmake --build redhat-linux-build
+%{cmake} -DBUILD_SHARED_LIBS:BOOL=OFF 
+cmake --build redhat-linux-build -DCMAKE_INSTALL_PREFIX=$RPM_BUILD_ROOT/usr
 
 %install
-cmake --install redhat-linux-build --prefix $RPM_BUILD_ROOT/usr
+cmake --install redhat-linux-build --install-prefix $RPM_BUILD_ROOT/usr
 
 %files
 %{_kf5_bindir}/kde_cdemu
