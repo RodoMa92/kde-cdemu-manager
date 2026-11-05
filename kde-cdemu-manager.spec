@@ -37,21 +37,10 @@ Dolphin/Konqueror.
 
 %build
 %{cmake} -DBUILD_SHARED_LIBS:BOOL=OFF
-cd redhat-linux-build
-# From Fedora 44 cmake by default will output a ninja buildfile rather than a makefile
-%if %{?fedora} >= 44
-    ninja %{?_smp_mflags}
-%else
-    make %{?_smp_mflags}
-%endif
+%{cmake} --build build
 
 %install
-cd redhat-linux-build
-%if %{?fedora} >= 44
-    ninja install $RPM_BUILD_ROOT
-%else
-    make install DESTDIR=$RPM_BUILD_ROOT
-%endif
+%{cmake} --install build --prefix $RPM_BUILD_ROOT
 
 %files
 $RPM_BUILD_ROOT%{_kf6_bindir}/kde_cdemu
