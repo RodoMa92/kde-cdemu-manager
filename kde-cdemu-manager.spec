@@ -36,7 +36,7 @@ Dolphin/Konqueror.
 %autosetup
 
 %build
-%{cmake} -DBUILD_SHARED_LIBS:BOOL=OFF
+%{cmake} -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_INSTALL_PREFIX=$RPM_BUILD_ROOT
 cd redhat-linux-build
 # From Fedora 44 cmake by default will output a ninja buildfile rather than a makefile
 %if %{?fedora} >= 44
@@ -50,7 +50,7 @@ cd redhat-linux-build
 %if %{?fedora} >= 44
     ninja install
 %else
-    make install DESTDIR=$RPM_BUILD_ROOT
+    make install
 %endif
 
 %files
