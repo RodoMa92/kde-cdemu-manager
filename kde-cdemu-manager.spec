@@ -36,7 +36,7 @@ Dolphin/Konqueror.
 %autosetup
 
 %build
-%{cmake} -DBUILD_SHARED_LIBS:BOOL=OFF -DCMAKE_INSTALL_PREFIX=$RPM_BUILD_ROOT
+DESTDIR=$RPM_BUILD_ROOT %{cmake} -DBUILD_SHARED_LIBS:BOOL=OFF
 cd redhat-linux-build
 # From Fedora 44 cmake by default will output a ninja buildfile rather than a makefile
 %if %{?fedora} >= 44
@@ -54,7 +54,7 @@ cd redhat-linux-build
 %endif
 
 %files
-%{_kf6_bindir}/kde_cdemu
+$RPM_BUILD_ROOT%{_kf6_bindir}/kde_cdemu
 %{_kf6_datadir}/applications/org.kde.kde_cdemu.desktop
 %{_kf6_datadir}/kio/servicemenus/kde_cdemu_mount.desktop
 %{_kf6_datadir}/locale
