@@ -1,4 +1,4 @@
-Name:           kde-cdemu-manager-kf6
+Name:           kde-cdemu-manager
 Version:        0.9
 Release:        0
 Summary:        Frontend to CDEmu
