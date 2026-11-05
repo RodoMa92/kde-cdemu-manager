@@ -36,7 +36,13 @@ Dolphin/Konqueror.
 %build
 %{cmake} -DBUILD_SHARED_LIBS:BOOL=OFF
 cd redhat-linux-build
-make %{?_smp_mflags}
+# From Fedora 44 cmake by default will output a ninja buildfile rather than a makefile
+%if %{?fedora} >= 44
+    ninja %{?_smp_mflags}
+%else
+    make %{?_smp_mflags}
+%endif
+
 
 %install
 cd redhat-linux-build
