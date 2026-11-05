@@ -35,10 +35,10 @@ Dolphin/Konqueror.
 
 %build
 %{cmake} -DBUILD_SHARED_LIBS:BOOL=OFF
-%{cmake} --build build
+cmake --build redhat-linux-build
 
 %install
-%{cmake} --install build --prefix $RPM_BUILD_ROOT
+cmake --install redhat-linux-build --prefix $RPM_BUILD_ROOT
 
 %files
 %{_kf5_bindir}/kde_cdemu

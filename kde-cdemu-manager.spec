@@ -37,13 +37,13 @@ Dolphin/Konqueror.
 
 %build
 %{cmake} -DBUILD_SHARED_LIBS:BOOL=OFF
-%{cmake} --build build
+cmake --build redhat-linux-build
 
 %install
-%{cmake} --install build --prefix $RPM_BUILD_ROOT
+cmake --install redhat-linux-build --prefix $RPM_BUILD_ROOT
 
 %files
-$RPM_BUILD_ROOT%{_kf6_bindir}/kde_cdemu
+%{_kf6_bindir}/kde_cdemu
 %{_kf6_datadir}/applications/org.kde.kde_cdemu.desktop
 %{_kf6_datadir}/kio/servicemenus/kde_cdemu_mount.desktop
 %{_kf6_datadir}/locale
