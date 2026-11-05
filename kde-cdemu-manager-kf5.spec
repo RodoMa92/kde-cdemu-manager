@@ -1,4 +1,4 @@
-Name:           kde-cdemu-manager
+Name:           kde-cdemu-manager-kf5
 Version:        0.8.2
 Release:        0
 Summary:        Frontend to CDEmu
