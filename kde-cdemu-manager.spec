@@ -48,7 +48,7 @@ cd redhat-linux-build
 %install
 cd redhat-linux-build
 %if %{?fedora} >= 44
-    ninja install DESTDIR=$RPM_BUILD_ROOT%{?_smp_mflags}
+    ninja install
 %else
     make install DESTDIR=$RPM_BUILD_ROOT
 %endif

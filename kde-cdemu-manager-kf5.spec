@@ -48,7 +48,7 @@ cd redhat-linux-build
 cd redhat-linux-build
 # From Fedora 44 cmake by default will output a ninja buildfile rather than a makefile
 %if %{?fedora} >= 44
-    ninja install DESTDIR=$RPM_BUILD_ROOT
+    ninja install
 %else
     make install DESTDIR=$RPM_BUILD_ROOT
 %endif
