@@ -31,7 +31,7 @@ Dolphin/Konqueror.
 %lang_package
 
 %prep
-%setup -q
+%autosetup
 
 %build
 %{cmake} -DBUILD_SHARED_LIBS:BOOL=OFF
